@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Bem-vindo à MacLanche Feliz do Fabrício";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mt-5">
+    <h1 class="display-4 fw-bold text-danger">🍔 MacLanche Feliz do Fabrício</h1>
+    <p class="lead mt-3">
+        Sabor, qualidade e alegria em cada mordida! <br/>
+        Bem-vindo à lanchonete mais feliz da cidade.
+    </p>
+
+    <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg"
+         class="img-fluid rounded shadow mt-4 mb-4" style="max-width: 500px;" alt="Hambúrguer delicioso" />
+
+    <div class="mt-4">
+        <a href="/Produtos" class="btn btn-primary btn-lg">🍟 Ver Cardápio</a>
+        <a href="/Produtos/Create" class="btn btn-success btn-lg ms-3">➕ Cadastrar Novo Produto</a>
+    </div>
+
+    <footer class="mt-5 text-muted">
+        <small>Desenvolvido por Fabrício • Projeto em ASP.NET MVC</small>
+    </footer>
 </div>

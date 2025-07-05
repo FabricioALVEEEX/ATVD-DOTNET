@@ -1,0 +1,49 @@
+@model IEnumerable<MacLancheFelizFabricio.Models.Produto>
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h2 class="mt-4">🍔 Produtos Cadastrados</h2>
+
+<div class="mb-3">
+    <a class="btn btn-success btn-lg" asp-action="Create">
+        ➕ Cadastrar Novo Produto
+    </a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        Nenhum produto cadastrado ainda.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th style="width: 250px;">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Preco.ToString("C")</td>
+                    <td>
+
+                        <a class="btn btn-warning btn-sm me-1" asp-action="Edit" asp-route-id="@item.Id">
+                            ✏️ Editar
+                        </a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">
+                            🗑️ Excluir
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

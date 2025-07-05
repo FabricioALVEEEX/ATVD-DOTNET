@@ -1,42 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using MVCDOTNET.Models;
-using System.Collections;
-using System.Collections.Generic;
-namespace MVCDOTNET.Controllers;
+using MacLancheFelizFabricio.Models;
 
-
-
-    class Comida
-        {            ArrayList comidas = new ArrayList();
-            public void AdicionarComida(Restaurante comida)
-            {
-                comidas.Add(comida);
-            }
-            public void RemoverComida(Restaurante comida)
-            {
-                comidas.Remove(comida);
-            }
-            public void ListarComidas()
-            {
-                foreach (Restaurante comida in comidas)
-                {
-                    Console.WriteLine($"Id: {comida.Id}, Nome: {comida.Nome}, Preco: {comida.Preco}");
-                }
-                if (comidas.Count == 0)
-                {
-                    Console.WriteLine("Nenhuma comida foi encontrada.");
-                } else
-                {
-                    Console.WriteLine("Comidas disponíveis:");
-                    foreach (Restaurante comida in comidas)
-                    {
-                        Console.WriteLine($"Id: {comida.Id}, Nome: {comida.Nome}, Preco: {comida.Preco}");
-                    }
-                }
-            }
-        }
-    
+namespace MacLancheFelizFabricio.Controllers;
 
 public class HomeController : Controller
 {
